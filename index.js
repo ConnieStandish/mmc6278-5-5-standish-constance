@@ -22,16 +22,16 @@ form.onsubmit = function(e) {
     console.log(input.value)
     input.value = ""
 
-    var todoText = ""
+    var todoText = input.value
     liElement.appendChild(document.createTextNode(todoText))
     ulElement.appendChild(liElement, buttonElement)
     // textAppear()
     // ulElement.appendChild(liElement)
 
-    if (e.target.value === todoText) {
-        e.target.value = todoText
+    if (input.value === todoText) {
+        input.value = todoText
     } else {
-        e.target.value = null
+        return null
     }
 }
 
