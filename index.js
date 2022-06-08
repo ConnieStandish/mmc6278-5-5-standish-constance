@@ -7,8 +7,24 @@
 //Use form submit event
 
 var form = document.querySelector('form')
+
 var buttonElement = document.createElement('button')
-document.body.appendChild(buttonElement)
+
 var liElement = document.createElement('li')
-document.body.appendChild(liElement)
+
+var ulElement = document.getElementById('todo-list')
+
+
+//Access data in form
+form.onsubmit = function(e) {
+    e.preventDefault()
+    var input = document.querySelector('input')
+    console.log(input.value)
+    input.value = ""
+
+    var todoText = document.createTextNode(input)
+    liElement.appendChild(document.createTextNode(todoText))
+    ulElement.appendChild(buttonElement)
+    ulElement.appendChild(liElement)
+}
 
