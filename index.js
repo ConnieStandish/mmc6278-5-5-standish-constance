@@ -22,9 +22,21 @@ form.onsubmit = function(e) {
     console.log(input.value)
     input.value = ""
 
-    var todoText = document.createTextNode(input)
+    var todoText = ""
     liElement.appendChild(document.createTextNode(todoText))
-    ulElement.appendChild(buttonElement)
-    ulElement.appendChild(liElement)
+    ulElement.appendChild(liElement, buttonElement)
+    // textAppear()
+    // ulElement.appendChild(liElement)
+
+    if (e.target.value === todoText) {
+        e.target.value = todoText
+    } else {
+        e.target.value = null
+    }
 }
+
+//Handle typed items outside form
+// function textAppear() {
+    
+// }
 
