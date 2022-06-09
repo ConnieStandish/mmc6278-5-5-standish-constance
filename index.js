@@ -8,10 +8,6 @@
 
 var form = document.querySelector('form')
 
-var buttonElement = document.createElement('button')
-
-var liElement = document.createElement('li')
-
 var ulElement = document.getElementById('todo-list')
 
 
@@ -19,24 +15,19 @@ var ulElement = document.getElementById('todo-list')
 form.onsubmit = function(e) {
     e.preventDefault()
     var input = document.querySelector('input')
-    console.log(input.value)
+    var userInput = input.value
     input.value = ""
-
-    var todoText = input.value
-    liElement.appendChild(document.createTextNode(todoText))
+    console.log(userInput)
+    var buttonElement = document.createElement('button')
+    var liElement = document.createElement('li')
+    liElement.innerHTML = userInput
     ulElement.appendChild(liElement, buttonElement)
-    // textAppear()
-    // ulElement.appendChild(liElement)
-
-    if (input.value === todoText) {
-        input.value = todoText
-    } else {
-        return null
-    }
+    
 }
 
-//Handle typed items outside form
-// function textAppear() {
-    
-// }
+//When clicked item through line must toggle on listElement
+
+
+
+
 
