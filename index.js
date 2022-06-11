@@ -20,12 +20,21 @@ form.onsubmit = function(e) {
     console.log(userInput)
     var buttonElement = document.createElement('button')
     var liElement = document.createElement('li')
-    liElement.innerHTML = userInput
-    ulElement.appendChild(liElement, buttonElement)
-    
+    ulElement.appendChild(liElement)
+    liElement.appendChild(buttonElement)
+    buttonElement.textContent = userInput
+
+    if (!userInput)
+    return false
 }
 
-//When clicked item through line must toggle on listElement
+//When clicked item through line must toggle on liElement
+ulElement.onclick = function() {
+    this.classList.toggle('line-through')
+}
+
+
+
 
 
 
