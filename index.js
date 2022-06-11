@@ -24,10 +24,12 @@ form.onsubmit = function(e) {
     liElement.appendChild(buttonElement)
     buttonElement.textContent = userInput
 
-    if (!userInput)
-    return false
-}
-
+    if (buttonElement.textContent !== userInput) { 
+        return false
+    } else {
+        return true
+    }
+} 
 //When clicked item through line must toggle on liElement
 ulElement.onclick = function() {
     this.classList.toggle('line-through')
