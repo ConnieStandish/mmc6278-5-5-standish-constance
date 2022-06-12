@@ -25,36 +25,8 @@ form.onsubmit = function(e) {
             buttonElement.style.textDecoration = 'line-through'
         }
     }
-    
-
-    // buttonElement.addEventListener('click', function() {
-    //     buttonElement.style = 'text-decoration: line-through'
-    // }, false)
-
-    // liElement.addEventListener('click', function() {
-    //     liElement.style.display = 'none'
-    // }, true)
-    
-    // liElement.addEventListener('click', function() {
-    //     liElement.style.display = 'none'
-    // }, true)
-
-    // buttonElement.addEventListener('click', firstClick)
-
-    // function firstClick() {
-    //     buttonElement.style = 'text-decoration: line-through'
-    // }
-
-    // liElement.addEventListener('click', secondClick)
-
-    // function secondClick() {
-    //     liElement.style.display = 'none'
-    // }
     }
 
-    // liElement.ondblclick = function() {
-    //     liElement.style.display = 'none'
-    // }
 
 
 
