@@ -29,6 +29,10 @@ form.onsubmit = function(e) {
     buttonElement.onclick = function() {
         buttonElement.style = 'text-decoration: line-through'
     }
+
+    liElement.ondblclick = function() {
+        liElement.style.display = 'none'
+    }
 } 
 //When clicked item through line must toggle on liElement
 
