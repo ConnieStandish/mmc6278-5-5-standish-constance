@@ -17,13 +17,23 @@ form.onsubmit = function(e) {
     liElement.appendChild(buttonElement)
     buttonElement.textContent = userInput
 
-    buttonElement.addEventListener('click', function() {
-        buttonElement.style = 'text-decoration: line-through'
-    }, false)
+    buttonElement.onclick = function() {
+        var checkClick = buttonElement.style.textDecoration === 'line-through'
+        if (checkClick) {
+            liElement.remove()
+        } else {
+            buttonElement.style.textDecoration = 'line-through'
+        }
+    }
+    
 
-    liElement.addEventListener('click', function() {
-        liElement.style.display = 'none'
-    }, true)
+    // buttonElement.addEventListener('click', function() {
+    //     buttonElement.style = 'text-decoration: line-through'
+    // }, false)
+
+    // liElement.addEventListener('click', function() {
+    //     liElement.style.display = 'none'
+    // }, true)
     
     // liElement.addEventListener('click', function() {
     //     liElement.style.display = 'none'
