@@ -10,6 +10,7 @@ var form = document.querySelector('form')
 
 var ulElement = document.getElementById('todo-list')
 
+var btn = document.getElementById('button')
 
 //Access data in form
 form.onsubmit = function(e) {
@@ -18,22 +19,18 @@ form.onsubmit = function(e) {
     var userInput = input.value
     input.value = ""
     console.log(userInput)
-    var buttonElement = document.createElement('button')
+    if (!userInput || !userInput.trim()) return
     var liElement = document.createElement('li')
     ulElement.appendChild(liElement)
+    var buttonElement = document.createElement('button')
     liElement.appendChild(buttonElement)
     buttonElement.textContent = userInput
 
-    if (buttonElement.textContent !== userInput) { 
-        return false
-    } else {
-        return true
+    buttonElement.onclick = function() {
+        buttonElement.style = 'text-decoration: line-through'
     }
 } 
 //When clicked item through line must toggle on liElement
-ulElement.onclick = function() {
-    this.classList.toggle('line-through')
-}
 
 
 
